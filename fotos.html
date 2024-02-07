@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas XYZ - Fotos</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Vincula el archivo CSS -->
+</head>
+
+<body>
+
+    <header>
+        <h1>Etiquetas XYZ - Fotos</h1>
+        <p>Especialistas en Etiquetas de Calidad</p>
+    </header>
+
+    <nav>
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="productos.html" class="nav-link">Productos</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="fotos.html" class="nav-link">Fotos</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+    </nav>
+
+    <section class="intro">
+        <h2>Galería de Fotos</h2>
+        <p>Explora nuestra galería de fotos para obtener una vista más cercana de nuestros productos y procesos.</p>
+    </section>
+
+    <section class="foto-container">
+        <a class="foto" href="foto1.png" target="_blank">
+            <img src="foto1.png" alt="Foto 1">
+        </a>
+        <a class="foto" href="foto2.png" target="_blank">
+            <img src="foto2.png" alt="Foto 2">
+        </a>
+        <a class="foto" href="foto3.png" target="_blank">
+            <img src="foto3.png" alt="Foto 3">
+        </a>
+        <a class="foto" href="foto4.png" target="_blank">
+            <img src="foto4.png" alt="Foto 3">
+        </a>
+    </section>
+
+    <div class="overlay" id="overlay" onclick="cerrarFoto()">
+        <img id="fotoAmpliada">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Etiquetas XYZ - Especialistas en Etiquetas</p>
+        <div class="whatsapp-burbuja">
+            <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-link">
+                <img src="logo-whatsapp.png" alt="WhatsApp Logo">
+                <span>Chatea conmigo</span>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function abrirFoto(src) {
+            var overlay = document.getElementById("overlay");
+            var fotoAmpliada = document.getElementById("fotoAmpliada");
+
+            fotoAmpliada.src = src;
+            overlay.style.display = "flex";
+        }
+
+        function cerrarFoto() {
+            var overlay = document.getElementById("overlay");
+            overlay.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

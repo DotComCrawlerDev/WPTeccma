@@ -10,7 +10,7 @@ body {
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #3498db;
     color: white;
 }
@@ -20,6 +20,16 @@ nav {
     justify-content: center;
     background-color: #2980b9;
     padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .nav-link {
@@ -95,19 +105,9 @@ nav {
     padding: 10px;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #3498db;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
 .whatsapp-burbuja {
     position: fixed;
-    bottom: 20px;
+    bottom: 0;
     right: 20px;
     /*background-color: #25d366; /* Color verde del logo de WhatsApp */
     padding: 10px;
@@ -115,6 +115,7 @@ footer {
     /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
     display: flex;
     align-items: center;
+    
     
 }
 
@@ -152,3 +153,65 @@ footer {
     margin: 20px 0; /* Espaciado entre las divisiones */
 }
 
+.index-container{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.productos-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.contacto-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Estilo para el contenedor del enlace "Contacto" */
+.nav-link-container {
+    position: relative;
+}
+
+/* Estilo para ocultar la lista desordenada inicialmente */
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    z-index: 1; /* Asegura que la lista esté por encima del resto del contenido */
+    opacity: 0; /* Inicialmente ocultamos la lista */
+    transition: opacity 0.3s ease-in-out; /* Agregamos una transición suave para la opacidad */
+}
+
+/* Estilo para mostrar la lista cuando se hace hover sobre el contenedor del enlace de contacto */
+.nav-link-container:hover .nav-dropdown {
+    display: block;
+    opacity: 1; /* Mostramos la lista gradualmente cambiando la opacidad */
+}
+
+/* Estilo para los elementos de la lista */
+.nav-dropdown li {
+    padding: 5px;
+}
+
+/* Estilo para el enlace "Contacto" */
+.nav-link {
+    color: black; /* Cambiamos el color a negro */
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+    position: relative; /* Agregamos posición relativa para permitir el ajuste del texto */
+}
+
+/* Estilo para el efecto de escala al hacer hover sobre el enlace */
+.nav-link:hover {
+    transform: scale(1.2);
+    top: -3px; /* Movemos el enlace hacia arriba al hacer hover */
+}

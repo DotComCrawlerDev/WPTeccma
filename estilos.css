@@ -296,3 +296,26 @@ img{
 *{
     box-sizing: border-box;
 }
+
+
+
+.contacto-container {
+    width: 80%; /* Ampliar el contenedor de contacto */
+    margin: 0 auto; /* Centrar el contenedor de contacto */
+}
+.contacto-form {
+    margin-top: 20px;
+}
+.contacto-form input,
+.contacto-form textarea,
+.contacto-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.contacto-form select {
+    width: calc(100% - 20px); /* Restar el padding para mantener la anchura total */
+}

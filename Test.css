@@ -11,18 +11,6 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Estilos de la cabecera */
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
 
 .logo {
     font-size: 24px;
@@ -157,7 +145,7 @@ body {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #000; /* Establecer el color de texto a negro */
+    color: #f1f1f1; /* Establecer el color de texto a negro */
     transition: transform 0.3s ease;
 }
 
@@ -167,3 +155,120 @@ body {
 }
 
 /* Resto de los estilos permanecen igual */
+
+.align-left {
+    text-align: left;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px; /* Tamaño inicial del logo */
+    height: auto; /* Para mantener la proporción */
+    display: block;
+    transition: width 0.3s ease; /* Animación de cambio de tamaño */
+}
+
+.logo-text {
+    margin-left: 10px;
+    display: inline; /* Para que el texto se muestre en línea con el logo */
+    transition: opacity 0.3s ease; /* Animación de cambio de opacidad */
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+    color: #007bff;
+}
+
+.scrolled .logo {
+    width: 60px; /* Tamaño del logo cuando se hace scroll */
+}
+
+.scrolled .logo-text {
+    opacity: 0; /* Ocultar el texto del logo cuando se hace scroll */
+}
+
+
+.header {
+    display: flex; /* Hacer que el header sea un contenedor de tipo flex */
+    justify-content: space-between; /* Alinear elementos al principio y al final del header */
+    align-items: center; /* Alinear verticalmente los elementos en el centro */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: padding-right 0.3s ease;
+    text-align: right; /* Alineación del texto hacia la derecha */
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto;
+    padding-top: 0px; /* Relleno superior para evitar superposición con el header */
+}
+
+.main-content {
+    margin-top: 120px; /* Igualar al altura del header */
+    padding-top: 20px; /* Relleno superior adicional para el contenido */
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 15px 0; /* Ajustar el padding para pantallas más pequeñas */
+    }
+
+    .main-content {
+        margin-top: 90px; /* Ajustar el margen superior para pantallas más pequeñas */
+    }
+}
+
+
+
+.scrolled .logo-text {
+    transform: translateX(20px); /* Desplazar el texto hacia la derecha */
+}
+
+.scrolled .nav-links {
+    justify-content: flex-end; /* Alinea los enlaces hacia la derecha */
+    transition: justify-content 0.3s ease; /* Agrega una transición suave */
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Alinear verticalmente el logo y el texto */
+}
+
+.logo-text {
+    margin-left: 10px;
+    display: inline;
+    transition: opacity 0.3s ease;
+}

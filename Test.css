@@ -9,6 +9,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    margin-top: 250px;
+    margin-bottom: 200px;
 }
 
 
@@ -36,8 +38,9 @@ body {
     background-image: url('FondoHero.jpeg'); /* Establecer la imagen de fondo */
     background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el área */
     background-position: center; /* Centrar la imagen de fondo */
-    padding: 300px 0 50px; /* Añadir relleno inferior para espacio */
+    padding: 370px 0 100px; /* Añadir relleno inferior para espacio */
     text-align: center;
+    margin-bottom: 50px;
 }
 
 
@@ -194,7 +197,7 @@ body {
 
 .nav-links li a {
     display: block;
-    padding: 10px;
+    padding: 20px;
     text-decoration: none;
     color: #fff;
     transition: transform 0.3s ease;
@@ -255,10 +258,6 @@ body {
 
 
 
-.scrolled .logo-text {
-    transform: translateX(20px); /* Desplazar el texto hacia la derecha */
-}
-
 .scrolled .nav-links {
     position: absolute; /* Cambiar la posición del nav bar */
     top: 50%; /* Alinear el nav bar verticalmente en el centro */
@@ -286,3 +285,63 @@ body {
     }
 }
 
+
+
+
+.contacto-container {
+    width: 80%; /* Ampliar el contenedor de contacto */
+    margin: 0 auto; /* Centrar el contenedor de contacto */
+}
+.contacto-form {
+    margin-top: 20px;
+}
+.contacto-form input,
+.contacto-form textarea,
+.contacto-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: none;
+}
+.contacto-form select {
+    width: calc(100% - 20px); /* Restar el padding para mantener la anchura total */
+}
+
+
+
+.whatsapp-link {
+    color: #3498db;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+.whatsapp-burbuja {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    /*background-color: #25d366; /* Color verde del logo de WhatsApp */
+    padding: 10px;
+    border-radius: 50%;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.whatsapp-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.whatsapp-link img {
+    width: 30px; 
+    margin-right: 10px;
+}

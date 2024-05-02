@@ -33,10 +33,13 @@ body {
 
 /* Estilos del héroe */
 .hero {
-    background-color: #f4f4f4;
-    padding: 100px 0;
+    background-image: url('FondoHero.jpeg'); /* Establecer la imagen de fondo */
+    background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el área */
+    background-position: center; /* Centrar la imagen de fondo */
+    padding: 300px 0 50px; /* Añadir relleno inferior para espacio */
     text-align: center;
 }
+
 
 .hero-title {
     font-size: 36px;
@@ -257,8 +260,10 @@ body {
 }
 
 .scrolled .nav-links {
-    justify-content: flex-end; /* Alinea los enlaces hacia la derecha */
-    transition: justify-content 0.3s ease; /* Agrega una transición suave */
+    position: absolute; /* Cambiar la posición del nav bar */
+    top: 50%; /* Alinear el nav bar verticalmente en el centro */
+    transform: translateY(-50%); /* Corregir la posición para centrarlo correctamente */
+    right: 20px; /* Posicionar el nav bar a 20px del borde derecho */
 }
 
 
@@ -272,3 +277,12 @@ body {
     display: inline;
     transition: opacity 0.3s ease;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        margin-top: 240px; /* Ajustar margen superior para pantallas más pequeñas */
+    }
+}
+

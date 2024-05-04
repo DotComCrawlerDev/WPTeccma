@@ -14,3 +14,18 @@ window.addEventListener('scroll', function() {
         navLinks.style.right = '20px'; // Restaurar la posición original del nav bar
     }
 });
+
+
+// Espera a que el documento se cargue completamente
+document.addEventListener('DOMContentLoaded', function() {
+    // Espera 5 segundos antes de mostrar el recuadro de WhatsApp
+    setTimeout(function() {
+        var whatsappBurbuja = document.querySelector('.whatsapp-burbuja');
+        whatsappBurbuja.style.opacity = '1'; // Cambia la opacidad para activar la transición
+    }, 5000); // 5000 milisegundos = 5 segundos
+});
+
+window.addEventListener('load', function() {
+    var headerHeight = document.querySelector('.header').offsetHeight;
+    document.querySelector('.hero').style.marginTop = headerHeight + 'px';
+});

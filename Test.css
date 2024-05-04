@@ -9,9 +9,10 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin-top: 250px;
-    margin-bottom: 200px;
+    margin-top: 0; /* Ajustar margen superior a 0 */
+    margin-bottom: 0; /* Ajustar margen inferior a 0 */
 }
+
 
 
 .logo {
@@ -41,6 +42,8 @@ body {
     padding: 370px 0 100px; /* Añadir relleno inferior para espacio */
     text-align: center;
     margin-bottom: 50px;
+    overflow: auto;
+    margin-top: auto;
 }
 
 
@@ -290,7 +293,8 @@ body {
 
 .contacto-container {
     width: 80%; /* Ampliar el contenedor de contacto */
-    margin: 0 auto; /* Centrar el contenedor de contacto */
+    margin: auto; /* Centrar el contenedor de contacto */
+    margin-top: 250px;
 }
 .contacto-form {
     margin-top: 20px;
@@ -322,17 +326,19 @@ body {
 
 .whatsapp-burbuja {
     position: fixed;
-    bottom: 0;
-    right: 20px;
-    /*background-color: #25d366; /* Color verde del logo de WhatsApp */
+    bottom: 20px; /* Ajusta la posición vertical según sea necesario */
+    right: 20px; /* Ajusta la posición horizontal según sea necesario */
+    background-color: #007bff; /* Color del header o footer */
     padding: 10px;
-    border-radius: 50%;
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+    border-radius: 20px; /* Haz que el borde sea más redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra para mayor profundidad */
     display: flex;
     align-items: center;
-    
-    
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    transition: opacity 0.5s ease; /* Transición suave de opacidad durante 0.5 segundos */
+    opacity: 0; /* Inicialmente, el recuadro tendrá una opacidad de 0 */
 }
+
 
 .whatsapp-link {
     color: white;
@@ -345,3 +351,5 @@ body {
     width: 30px; 
     margin-right: 10px;
 }
+
+

@@ -29,3 +29,29 @@ window.addEventListener('load', function() {
     var headerHeight = document.querySelector('.header').offsetHeight;
     document.querySelector('.hero').style.marginTop = headerHeight + 'px';
 });
+
+
+//Animacion de Contacto
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Aquí es donde enviarías el formulario y verificarías si fue exitoso o no.
+    // Por ahora, solo simularé un envío exitoso.
+    var success = Math.random() > 0.5;
+
+    var statusElement = document.getElementById('status');
+    statusElement.style.display = 'block';
+
+    if (success) {
+        statusElement.textContent = '¡Formulario enviado con éxito!';
+        statusElement.style.animation = 'success 2s';
+    } else {
+        statusElement.textContent = 'Hubo un error al enviar el formulario.';
+        statusElement.style.animation = 'error 2s';
+    }
+
+    // Oculta el elemento de estado después de la animación.
+    setTimeout(function() {
+        statusElement.style.display = 'none';
+    }, 2000);
+});

@@ -234,6 +234,10 @@ body {
     z-index: 1000;
     transition: padding-right 0.3s ease;
     text-align: right; /* Alineación del texto hacia la derecha */
+
+
+    /*transition: all 0.5s ease;*/
+
 }
 
 
@@ -242,7 +246,9 @@ body {
     max-width: 1200px; /* Ancho máximo del contenido */
     margin: 0 auto;
     padding-top: 0px; /* Relleno superior para evitar superposición con el header */
+
 }
+
 
 .main-content {
     margin-top: 120px; /* Igualar al altura del header */
@@ -353,3 +359,35 @@ body {
 }
 
 
+/* Animaciones Formulario Contacto */
+@keyframes success {
+    0% { color: green; opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes error {
+    0% { color: red; opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.hero .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    /* Agrega esto si quieres una sombra alrededor del recuadro */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#nosotros {
+    padding-bottom: 50px;
+}
+
+
+
+.section-title {
+    margin-bottom: 10px; /* Ajusta este valor a lo que necesites */
+}
+
+/* O ajusta el margen superior del párrafo */

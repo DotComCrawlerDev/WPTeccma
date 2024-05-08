@@ -11,6 +11,8 @@ body {
     line-height: 1.6;
     margin-top: 0; /* Ajustar margen superior a 0 */
     margin-bottom: 0; /* Ajustar margen inferior a 0 */
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -43,7 +45,7 @@ body {
     text-align: center;
     margin-bottom: 50px;
     overflow: auto;
-    margin-top: auto;
+    margin-top: 50px;
 }
 
 
@@ -234,7 +236,7 @@ body {
     z-index: 1000;
     transition: padding-right 0.3s ease;
     text-align: right; /* Alineación del texto hacia la derecha */
-
+    margin-bottom: 0;
 
     /*transition: all 0.5s ease;*/
 
@@ -358,6 +360,11 @@ body {
     margin-right: 10px;
 }
 
+.whatsapp-burbuja:hover {
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
 
 /* Animaciones Formulario Contacto */
 @keyframes success {
@@ -391,3 +398,17 @@ body {
 }
 
 /* O ajusta el margen superior del párrafo */
+
+.logo-and-social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.copyright {
+    margin-top: 50px;
+}
+
+
+

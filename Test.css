@@ -13,6 +13,9 @@ body {
     margin-bottom: 0; /* Ajustar margen inferior a 0 */
     margin: 0;
     padding: 0;
+
+    padding-top: calc(0px); /* Ajusta este valor según el tamaño de tu encabezado */
+
 }
 
 
@@ -343,8 +346,12 @@ body {
     display: flex;
     align-items: center;
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    transition: opacity 0.5s ease; /* Transición suave de opacidad durante 0.5 segundos */
+    transition: opacity 0.5s ease, background-color 0.3s ease; /* Transición suave de opacidad y color de fondo durante 0.5 y 0.3 segundos respectivamente */
     opacity: 0; /* Inicialmente, el recuadro tendrá una opacidad de 0 */
+}
+
+.whatsapp-burbuja:hover {
+    background-color: #333;
 }
 
 
@@ -360,10 +367,7 @@ body {
     margin-right: 10px;
 }
 
-.whatsapp-burbuja:hover {
-    background-color: #333;
-    transition: background-color 0.3s ease;
-}
+
 
 
 /* Animaciones Formulario Contacto */
@@ -410,5 +414,23 @@ body {
     margin-top: 50px;
 }
 
+hr {
+    margin-top: 50px; /* Ajusta este valor a lo que necesites */
+}
 
+#quienes-somos {
+    padding-top: calc(200px + 1em); /* Ajusta este valor según el tamaño de tu encabezado */
+    padding-bottom: 50px;
+}
 
+#nuestra-mision {
+    padding-bottom: 50px;
+}
+
+#nuestros-valores {
+    padding-bottom: 50px;
+}
+
+#nuestro-equipo {
+    padding-bottom: 50px;
+}

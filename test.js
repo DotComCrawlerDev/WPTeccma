@@ -55,3 +55,12 @@ document.querySelector('form').addEventListener('submit', function(event) {
         statusElement.style.display = 'none';
     }, 2000);
 });
+
+
+window.addEventListener('load', adjustMargin);
+window.addEventListener('resize', adjustMargin);
+
+function adjustMargin() {
+    var headerHeight = document.querySelector('#header').offsetHeight;
+    document.querySelector('#quienes-somos').style.marginTop = headerHeight + 'px';
+}

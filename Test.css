@@ -299,14 +299,13 @@ body {
     }
 }
 
-
-
-
 .contacto-container {
     width: 80%; /* Ampliar el contenedor de contacto */
     margin: auto; /* Centrar el contenedor de contacto */
-    margin-top: 250px;
+    margin-top: 100px;
+    padding-top: 27px; 
 }
+
 .contacto-form {
     margin-top: 20px;
 }
@@ -396,7 +395,6 @@ body {
 }
 
 
-
 .section-title {
     margin-bottom: 10px; /* Ajusta este valor a lo que necesites */
 }
@@ -419,7 +417,7 @@ hr {
 }
 
 #quienes-somos {
-    padding-top: calc(200px + 1em); /* Ajusta este valor según el tamaño de tu encabezado */
+    padding-top: calc(110px + 1em); /* Ajusta este valor según el tamaño de tu encabezado */
     padding-bottom: 50px;
 }
 

@@ -432,3 +432,45 @@ hr {
 #nuestro-equipo {
     padding-bottom: 50px;
 }
+
+#TestProducto {
+    padding-top: 200px;
+}
+ 
+/* Tamaño de todas las fotos de TestProducto a un tamaño de 100 px */
+#test-producto img {
+    width: 100px;
+    height: 100px;
+}
+
+.test-productos-body .product img {
+    width: 100px;
+    height: 100px;
+}
+
+#test-producto img {
+    width: 100px;
+    height: 100px;
+    transform: skew(-10deg);
+}
+
+.test-productos-body .product img {
+    width: 100px;
+    height: 100px;
+    transform: skew(10deg); /* Ajusta el ángulo de inclinación a tus necesidades */
+}
+
+hr {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+
+
+.test-nosotros-body .test-nosotros {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: justify;
+}

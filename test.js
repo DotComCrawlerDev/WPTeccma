@@ -92,3 +92,12 @@ function adjustMargin() {
     var headerHeight = document.querySelector('#header').offsetHeight;
     document.querySelector('#quienes-somos').style.marginTop = headerHeight + 'px';
 }
+
+/*Boton de WhatsApp*/
+const svg = document.getElementById('Logo-extendido, LogoWsp');
+        svg.onclick = (e) => {
+            const specificColor = '#007bff';
+            document.documentElement.style.setProperty('--dark-color', specificColor);
+            svg.style.backgroundColor = specificColor;
+        }
+/*Boton de WhatsApp*/

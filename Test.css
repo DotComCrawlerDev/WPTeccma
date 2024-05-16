@@ -39,16 +39,15 @@ body {
     text-decoration: none;
 }
 
-/* Estilos del héroe */
 .hero {
-    background-image: url('FondoHero.jpeg'); /* Establecer la imagen de fondo */
+    background-image: url('IMG_8262.JPEG'); /* Establecer la imagen de fondo */
     background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el área */
     background-position: center; /* Centrar la imagen de fondo */
     padding: 370px 0 100px; /* Añadir relleno inferior para espacio */
     text-align: center;
     margin-bottom: 50px;
     overflow: auto;
-    margin-top: 50px;
+    margin-top: 50px;  
 }
 
 
@@ -88,7 +87,7 @@ body {
 
 /* Estilos del pie de página */
 .footer {
-    background-color: #333;
+    background-color: rgb(78, 102, 114);
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -180,17 +179,28 @@ body {
 }
 
 .logo {
-    width: 100px; /* Tamaño inicial del logo */
+    width: 200px; /* Tamaño inicial del logo */
     height: auto; /* Para mantener la proporción */
     display: block;
     transition: width 0.3s ease; /* Animación de cambio de tamaño */
 }
 
+
+
 .logo-text {
     margin-left: 10px;
-    display: inline; /* Para que el texto se muestre en línea con el logo */
-    transition: opacity 0.3s ease; /* Animación de cambio de opacidad */
+    display: inline;
+    transition: opacity 0.3s ease;
 }
+
+.scrolled .logo {
+    width: 150px; /* Tamaño del logo cuando se hace scroll */
+}
+
+.scrolled .logo-text {
+    opacity: 0; /* Ocultar el texto del logo cuando se hace scroll */
+}
+
 
 .nav-links {
     list-style-type: none;
@@ -216,13 +226,6 @@ body {
     color: #007bff;
 }
 
-.scrolled .logo {
-    width: 60px; /* Tamaño del logo cuando se hace scroll */
-}
-
-.scrolled .logo-text {
-    opacity: 0; /* Ocultar el texto del logo cuando se hace scroll */
-}
 
 
 .header {
@@ -233,7 +236,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-image: url(Header5.svg);
+    /*background-color: #4e6672;*/
+    /*background-color: rgb(78, 102, 114);;*/ /* Color Propuesto 2*/
+    /*background-color: rgb(112, 120, 124);*/ /* Color actual del header */
+    /*background-color: #333;*/ /* Color de viejo fondo del header */
+    /*background-color: rgb(94, 123, 138);*/ /* Color Propuesto */
     color: #fff;
     padding: 20px 0;
     z-index: 1000;
@@ -280,16 +288,7 @@ body {
 }
 
 
-.logo-container {
-    display: flex;
-    align-items: center; /* Alinear verticalmente el logo y el texto */
-}
 
-.logo-text {
-    margin-left: 10px;
-    display: inline;
-    transition: opacity 0.3s ease;
-}
 
 
 
@@ -326,22 +325,16 @@ body {
 
 
 
-.whatsapp-link {
-    color: #3498db;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    padding: 10px;
-}
+
 
 .whatsapp-burbuja {
     position: fixed;
     bottom: 20px; /* Ajusta la posición vertical según sea necesario */
     right: 20px; /* Ajusta la posición horizontal según sea necesario */
-    background-color: #007bff; /* Color del header o footer */
+
     padding: 10px;
     border-radius: 20px; /* Haz que el borde sea más redondeado */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra para mayor profundidad */
+    
     display: flex;
     align-items: center;
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
@@ -349,22 +342,8 @@ body {
     opacity: 0; /* Inicialmente, el recuadro tendrá una opacidad de 0 */
 }
 
-.whatsapp-burbuja:hover {
-    background-color: #333;
-}
 
 
-.whatsapp-link {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.whatsapp-link img {
-    width: 30px; 
-    margin-right: 10px;
-}
 
 
 
@@ -394,6 +373,10 @@ body {
     padding-bottom: 50px;
 }
 
+#productos {
+    padding-bottom: 50px;
+}
+
 
 .section-title {
     margin-bottom: 10px; /* Ajusta este valor a lo que necesites */
@@ -416,9 +399,10 @@ hr {
     margin-top: 50px; /* Ajusta este valor a lo que necesites */
 }
 
-#quienes-somos {
+.quienes-somos {
     padding-top: calc(110px + 1em); /* Ajusta este valor según el tamaño de tu encabezado */
     padding-bottom: 50px;
+    width: 100%;
 }
 
 #nuestra-mision {
@@ -446,6 +430,7 @@ hr {
 .test-productos-body .product img {
     width: 100px;
     height: 100px;
+    padding: 20px;
 }
 
 #test-producto img {
@@ -474,3 +459,128 @@ hr {
     gap: 20px;
     text-align: justify;
 }
+
+.product-image {
+    display: block;
+    margin: 0 auto;
+    width: 50%; /* Ajusta el tamaño de la imagen */
+}
+
+.box {
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Añade bordes redondeados */
+    padding: 20px; /* Añade un poco de espacio alrededor del texto */
+    background-color: #fff; /* Añade un color de fondo */
+    margin: 10px;
+    text-align: justify;
+}
+
+#contacto {
+    text-align: justify;
+    padding-bottom: 50px;
+}
+
+.sticky-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.header-scrolled {
+    background-color: #333; /* Cambia a tu color preferido */
+    /* Añade cualquier otro estilo que quieras para el estado "scrolled" */
+}
+
+.spacer {
+    aspect-ratio: 960 / 540; /* Ajusta la relación de aspecto según tus necesidades */
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.layer1 {
+    background-image: url('Waves.svg');
+}
+
+
+
+
+/*Inicia Boton WhatsApp*/
+:root {
+    --dark-color: #333;
+    --light-color: #007bff;
+}
+svg {
+    cursor: pointer;
+}
+#Logo-extendido {
+    fill: var(--dark-color);
+}
+#Logo-extendido:hover {
+    fill: var(--light-color);
+}
+#Logo-extendido{
+    opacity: 0;
+    transition: ease 0.3s;
+}
+#LogoWsp {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+#LogoWsp {
+    transform: translateX(0%);
+}
+
+svg:hover #LogoWsp {
+    transform: translateX(-33%);
+    opacity: 1;
+}
+
+svg:hover #Logo-extendido {
+    opacity: 1;
+    transition: ease 0.3s;
+}
+
+#ContenedorWsp {
+    transition: all 0.3s ease-in-out;
+    transform: translateX(0%);
+    opacity: 1;
+    fill: var(--light-color)
+}
+svg:hover #ContenedorWsp {
+    transform: translateX(-33%);
+    opacity: 0;
+}
+/*Termina Boton WSP*/
+
+
+.container-nosotros {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-section {
+    width: 50%;
+    margin-left: 80px;
+    text-align: justify;
+    /* Añade el padding que necesites aquí */
+}
+
+.image-section {
+    width: 30%;
+    height: 30%;
+    align-self: center;
+    align-items: center;
+    margin-right: 5%; /* Ajusta este valor según lo necesites */
+    /* Añade el padding que necesites aquí */
+}
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+

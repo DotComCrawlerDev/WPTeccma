@@ -583,4 +583,10 @@ svg:hover #ContenedorWsp {
     height: auto;
 }
 
+#BtnContacto{
+    padding: 50px;
+}
 
+.container-nosotros{
+    text-align: justifyxs;
+}

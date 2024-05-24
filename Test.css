@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box /* Ajustar el modelo de caja a border-box */;
 }
 
 /* Estilos generales */
@@ -448,7 +448,8 @@ hr {
 hr {
     width: 95%;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 10px;
+    margin: 20px;
 }
 
 
@@ -589,4 +590,35 @@ svg:hover #ContenedorWsp {
 
 .container-nosotros{
     text-align: justifyxs;
+}
+
+
+/* Establece el padding para dispositivos de escritorio */
+.quienes-somos, #nuestra-mision, #nuestro-equipo, #nuestros-valores {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    text-align: justify;
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.quienes-somos{
+    padding-top: 100px;
+}
+
+/* Cambia el padding para dispositivos móviles */
+@media (max-width: 600px) {
+    .quienes-somos, #nuestra-mision, #nuestro-equipo, #nuestros-valores {
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .quienes-somos{
+        padding-top: 100px;
+    }
+}
+
+#fotos {
+    padding-bottom: 50px;
 }

@@ -101,3 +101,5 @@ const svg = document.getElementById('Logo-extendido, LogoWsp');
             svg.style.backgroundColor = specificColor;
         }
 /*Boton de WhatsApp*/
+
+

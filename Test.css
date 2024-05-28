@@ -11,9 +11,11 @@ body {
     line-height: 1.6;
     margin-top: 0; /* Ajustar margen superior a 0 */
     margin-bottom: 0; /* Ajustar margen inferior a 0 */
-    margin: 0;
-    padding: 0;
+    border: auto;
+    padding: auto;
 
+
+    
     padding-top: calc(0px); /* Ajusta este valor según el tamaño de tu encabezado */
 
 }
@@ -395,9 +397,7 @@ body {
     margin-top: 50px;
 }
 
-hr {
-    margin-top: 50px; /* Ajusta este valor a lo que necesites */
-}
+
 
 .quienes-somos {
     padding-top: calc(110px + 1em); /* Ajusta este valor según el tamaño de tu encabezado */
@@ -417,48 +417,61 @@ hr {
     padding-bottom: 50px;
 }
 
-#TestProducto {
-    padding-top: 200px;
-}
- 
-/* Tamaño de todas las fotos de TestProducto a un tamaño de 100 px */
-#test-producto img {
-    width: 100px;
-    height: 100px;
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.test-productos-body .product img {
-    width: 100px;
-    height: 100px;
-    padding: 20px;
+.product {
+    flex: 1 0 30%; /* Esto hace que cada producto ocupe al menos el 30% del ancho del contenedor, permitiendo que se muestren tres productos por fila */
+    margin: 1%; /* Esto agrega un pequeño margen alrededor de cada producto para evitar que se toquen */
 }
 
-#test-producto img {
-    width: 100px;
-    height: 100px;
-    transform: skew(-10deg);
+.product img {
+    width: 100%;
+    height: auto;
 }
 
-.test-productos-body .product img {
-    width: 100px;
-    height: 100px;
-    transform: skew(10deg); /* Ajusta el ángulo de inclinación a tus necesidades */
+@media (max-width: 600px) {
+    .product {
+        flex: 1 0 100%; /* Esto hace que cada producto ocupe el 100% del ancho del contenedor en vistas móviles, lo que significa que solo se mostrará un producto por fila */
+    }
 }
+
+@media (max-width: 600px) {
+    .product img {
+        flex: 1 0 100%;
+    }
+}
+
+.product-image {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
 
 hr {
     width: 95%;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 60px;
     margin: 20px;
 }
 
+
+.test-productos-body {
+    margin-top: 100px;
+}
 
 
 .test-nosotros-body .test-nosotros {
     display: flex;
     align-items: center;
     gap: 20px;
+    margin: 0px;
     text-align: justify;
+
 }
 
 .product-image {
@@ -622,3 +635,4 @@ svg:hover #ContenedorWsp {
 #fotos {
     padding-bottom: 50px;
 }
+

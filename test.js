@@ -1,10 +1,29 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector('.nav');
+    const abrir = document.querySelector('#abrir');
+    const cerrar = document.querySelector('#cerrar');
+
+    abrir.addEventListener('click', () => {
+    nav.classList.add('visible');
+});
+
+cerrar.addEventListener('click', () => {
+    nav.classList.remove('visible');
+});
+});
+
+
+
+
+
 // Espera a que el documento se cargue completamente
 document.addEventListener('DOMContentLoaded', function() {
     // Obtén la URL de la página actual
     var currentPage = window.location.href.split('/').pop();
 
-    // Verifica si la página actual es Test.html
-    if (currentPage !== 'Test.html') {
+    // Verifica si la página actual es Index.html
+    if (currentPage !== 'Index.html') {
         // En todas las demás páginas, el header aparece en el segundo estado
         var header = document.getElementById('header');
         var navLinks = document.getElementById('nav-links');
@@ -25,8 +44,8 @@ window.addEventListener('scroll', function() {
     // Obtén la URL de la página actual
     var currentPage = window.location.href.split('/').pop();
 
-    // Verifica si la página actual es Test.html
-    if (currentPage === 'Test.html') {
+    // Verifica si la página actual es Index.html
+    if (currentPage === 'Index.html') {
         var header = document.getElementById('header');
         var navLinks = document.getElementById('nav-links');
         var scrollTop = window.scrollY;

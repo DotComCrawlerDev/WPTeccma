@@ -82,7 +82,7 @@ body {
 .footer {
     background-color: rgb(78, 102, 114);
     color: #fff;
-    padding: 20px 0;
+    padding: 20px 20px;
     text-align: center;
 }
 
@@ -171,6 +171,7 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
+    padding-left: 25px;
 }
 
 .logo {
@@ -403,6 +404,7 @@ body {
     width: 100%;
     height: 200px; /* Ajusta esto a la altura que desees */
     object-fit: cover;
+    transition: 0.3 ease-in-out;
 }
 
 @media (max-width: 600px) {
@@ -543,6 +545,7 @@ svg:hover #ContenedorWsp {
 .container-nosotros {
     display: flex;
     justify-content: space-between;
+    text-align: justify;
 }
 
 .text-section {
@@ -567,10 +570,6 @@ svg:hover #ContenedorWsp {
 
 #BtnContacto{
     padding: 50px;
-}
-
-.container-nosotros{
-    text-align: justifyxs;
 }
 
 
@@ -610,24 +609,45 @@ svg:hover #ContenedorWsp {
 .abrir-menu, 
 .cerrar-menu {
     display: none;
-    margin-left: 80px;
+    margin-left: 40px;
     border: 0;
     font-size: 1.25rem;
     background-color: transparent;
     cursor: pointer;
 }
-.abrir-menu{
-    color: black;
+
+
+.container-cerrar{
+    display: none;
 }
-.cerrar-menu{
+
+.abrir-menu {
+    color: black;
+    }
+
+    
+.cerrar-menu {
     color: white;
+}
+
+.abrir-menu img{
+    width: 40px;
+    height: 40px;
+    background-color: #1c1c1c;
 }
 
 @media screen and (max-width: 768px) {
     .abrir-menu,
-    .cerrar-menu {
+    .cerrar-menu{
         display: block;
     }
+
+    
+
+    .container-cerrar{
+        display: block;
+    }
+
     .nav {
         opacity: 0;
         visibility: hidden;
@@ -638,12 +658,13 @@ svg:hover #ContenedorWsp {
         position: absolute;
         top: 0;
         right: 0;
-
-        bottom: 0;
+        left: 0;
+        bottom: 0; /*Cuando este esta activo, el menu se despliega "incompleto" */
         /* background-image: url(Header5.svg); */
         background-color: #1c1c1c;
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.8);
+        transition: visibility 0.3s;
     }
 
     .nav.visible {
@@ -651,14 +672,61 @@ svg:hover #ContenedorWsp {
         visibility: visible;
     }
 
+    .nav.visible .abrir-menu {
+        display: none;
+    }
+
+    .nav.visible .cerrar-menu {
+        display: block;
+    }
+
     .nav-links {
         flex-direction: column;
         align-items: flex-end;
     }
+
     .nav-links li a {
         color: white;
     }
+
+    .nav.visible .nav-links li {
+        animation: slideIn 0.5s forwards;
+    }
+
+    .nav.visible .nav-links li:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .nav.visible .nav-links li:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .nav.visible .nav-links li:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .nav.visible .nav-links li:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+    
+
+    .nav .nav-links li {
+        opacity: 0;
+    }
+    /* Continúa para el resto de los elementos de la lista */
+
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
+
 
 
 
@@ -801,4 +869,66 @@ svg:hover #ContenedorWsp {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+@media screen and (max-width: 768px) {
+    .test-nosotros-body {
+        padding-top: 20px;
+    }
+    .quienes-somos{
+        margin-top: 75px;
+        padding: 35px;
+    }
+    #nuestra-mision, #nuestros-valores, #nuestro-equipo {
+        padding: 35px;
+    }
+    #nuestro-equipo{
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .test-productos-body {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .producto-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Asegura que la imagen se ajuste a su contenedor manteniendo su aspecto */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-container {
+        margin-left: 20px;
+    }
+}
+
+
+
+.product img {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.product img:hover {
+    opacity: 0.5;
+}
+
+
+
+
+
+/* Revisar Nav y Header, Posible funcionamiento */
+
+@media screen and (max-width: 768px) {
+    #nav-cerrar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 }

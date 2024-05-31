@@ -1,0 +1,18 @@
+<svg width="38" height="28" viewBox="0 0 38 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="0.5" x2="38" y2="0.5" stroke="black"/>
+<line y1="1.5" x2="38" y2="1.5" stroke="black"/>
+<line y1="-0.5" x2="38" y2="-0.5" transform="matrix(1 0 0 -1 0 3)" stroke="black"/>
+<line y1="-0.5" x2="38" y2="-0.5" transform="matrix(1 0 0 -1 0 2)" stroke="black"/>
+<line y1="8.5" x2="38" y2="8.5" stroke="black"/>
+<line y1="9.5" x2="38" y2="9.5" stroke="black"/>
+<line y1="-0.5" x2="38" y2="-0.5" transform="matrix(1 0 0 -1 0 11)" stroke="black"/>
+<line y1="-0.5" x2="38" y2="-0.5" transform="matrix(1 0 0 -1 0 10)" stroke="black"/>
+<line y1="16.5" x2="38" y2="16.5" stroke="black"/>
+<line y1="17.5" x2="38" y2="17.5" stroke="black"/>
+<line y1="-0.5" x2="38" y2="-0.5" transform="matrix(1 0 0 -1 0 19)" stroke="black"/>
+<line y1="-0.5" x2="38" y2="-0.5" transform="matrix(1 0 0 -1 0 18)" stroke="black"/>
+<line y1="24.5" x2="38" y2="24.5" stroke="black"/>
+<line y1="25.5" x2="38" y2="25.5" stroke="black"/>
+<line y1="-0.5" x2="38" y2="-0.5" transform="matrix(1 0 0 -1 0 27)" stroke="black"/>
+<line y1="-0.5" x2="38" y2="-0.5" transform="matrix(1 0 0 -1 0 26)" stroke="black"/>
+</svg>

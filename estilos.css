@@ -587,6 +587,12 @@ svg:hover #ContenedorWsp {
     padding-top: 100px;
 }
 
+
+#nuestros-valores{
+    padding-bottom: 50px;
+}
+
+
 /* Cambia el padding para dispositivos móviles */
 @media (max-width: 600px) {
     .quienes-somos, #nuestra-mision, #nuestro-equipo, #nuestros-valores {
@@ -659,6 +665,7 @@ svg:hover #ContenedorWsp {
         top: 0;
         right: 0;
         left: 0;
+
         bottom: 0; /*Cuando este esta activo, el menu se despliega "incompleto" */
         /* background-image: url(Header5.svg); */
         background-color: #1c1c1c;
@@ -886,6 +893,9 @@ svg:hover #ContenedorWsp {
     #nuestro-equipo{
         margin-bottom: 50px;
     }
+    #nuestros-valores{
+        margin-bottom: 40px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -932,3 +942,4 @@ svg:hover #ContenedorWsp {
         width: 100%;
     }
 }
+

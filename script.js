@@ -121,4 +121,3 @@ const svg = document.getElementById('Logo-extendido, LogoWsp');
         }
 /*Boton de WhatsApp*/
 
-

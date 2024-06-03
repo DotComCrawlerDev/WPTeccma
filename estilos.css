@@ -389,11 +389,6 @@ body {
     padding-bottom: 50px;
 }
 
-.product-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 
 .product {
     flex: 1 0 30%; /* Esto hace que cada producto ocupe al menos el 30% del ancho del contenedor, permitiendo que se muestren tres productos por fila */
@@ -900,7 +895,8 @@ svg:hover #ContenedorWsp {
 
 @media screen and (max-width: 768px) {
     .test-productos-body {
-        padding: 20px;
+        margin-top: 200px;
+        padding: 10px;
     }
 }
 
@@ -943,3 +939,63 @@ svg:hover #ContenedorWsp {
     }
 }
 
+
+
+/* Estilos de los Productos */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "order-1 order-2 order-3"
+        "order-4 order-5 order-6"
+        "order-7 order-8 order-9"
+        "hr-divisor hr-divisor hr-divisor";
+}
+
+.order-1 { order: 1; grid-area: order-1; }
+.order-2 { order: 2; grid-area: order-2; }
+.order-3 { order: 3; grid-area: order-3; }
+.order-4 { order: 4; grid-area: order-4; }
+.order-5 { order: 5; grid-area: order-5; }
+.order-6 { order: 6; grid-area: order-6; }
+.order-7 { order: 7; grid-area: order-7; }
+.order-8 { order: 8; grid-area: order-8; }
+.order-9 { order: 9; grid-area: order-9; }
+.hr-divisor { grid-area: hr-divisor; }
+
+/* Vista móvil */
+@media (max-width: 600px) {
+    .product-list {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "order-1"
+            "order-4"
+            "order-7"
+            "hr-divisor"
+            "order-2"
+            "order-5"
+            "order-8"
+            "order-3"
+            "order-6"
+            "order-9";
+    }
+
+    .order-1 { order: 1; }
+    .order-2 { order: 2; }
+    .order-3 { order: 3; }
+    .order-4 { order: 4; }
+    .order-5 { order: 5; }
+    .order-6 { order: 6; }
+    .order-7 { order: 7; }
+    .order-8 { order: 8; }
+    .order-9 { order: 9; }
+}
+
+/* Vista de los productos */
+
+.hr-divisor {
+    display: none;
+    @media screen and (max-width: 768px) {
+        display: block; 
+    }
+}

@@ -1,16 +1,18 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.nav');
     const abrir = document.querySelector('#abrir');
     const cerrar = document.querySelector('#cerrar');
+    const whatsappBurbuja = document.querySelector('.whatsapp-burbuja'); // Selecciona el icono de WhatsApp
 
     abrir.addEventListener('click', () => {
-    nav.classList.add('visible');
-});
+        nav.classList.add('visible');
+        whatsappBurbuja.style.display = 'none'; // Oculta el icono de WhatsApp cuando se abre el menú
+    });
 
-cerrar.addEventListener('click', () => {
-    nav.classList.remove('visible');
-});
+    cerrar.addEventListener('click', () => {
+        nav.classList.remove('visible');
+        whatsappBurbuja.style.display = 'block'; // Muestra el icono de WhatsApp cuando se cierra el menú
+    });
 });
 
 
@@ -119,5 +121,7 @@ const svg = document.getElementById('Logo-extendido, LogoWsp');
             document.documentElement.style.setProperty('--dark-color', specificColor);
             svg.style.backgroundColor = specificColor;
         }
+
+        
 /*Boton de WhatsApp*/
 

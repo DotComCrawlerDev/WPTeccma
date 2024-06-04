@@ -125,3 +125,64 @@ const svg = document.getElementById('Logo-extendido, LogoWsp');
         
 /*Boton de WhatsApp*/
 
+
+
+function changeImage() {
+    setTimeout(() => {
+        document.getElementById('product-image').style.opacity = '0';
+        setTimeout(() => {
+            document.getElementById('product-image').src = 'ImpresoraZebra.jpg';
+            document.getElementById('product-image').style.opacity = '1';
+        }, 250);
+    }, 250);
+}
+
+function resetImage() {
+    setTimeout(() => {
+        document.getElementById('product-image').style.opacity = '0';
+        setTimeout(() => {
+            document.getElementById('product-image').src = 'Zebra.png';
+            document.getElementById('product-image').style.opacity = '1';
+        }, 250);
+    }, 250);
+}
+
+function changeImage2() {
+    setTimeout(() => {
+        document.getElementById('product-image2').style.opacity = '0';
+        setTimeout(() => {
+            document.getElementById('product-image2').src = 'CompilacionSATO.jpg';
+            document.getElementById('product-image2').style.opacity = '1';
+        }, 250);
+    }, 250);
+}
+
+function resetImage2() {
+    setTimeout(() => {
+        document.getElementById('product-image2').style.opacity = '0';
+        setTimeout(() => {
+            document.getElementById('product-image2').src = 'SATO.jpeg';
+            document.getElementById('product-image2').style.opacity = '1';
+        }, 250);
+    }, 250);
+}
+
+function changeImage3() {
+    setTimeout(() => {
+        document.getElementById('product-image3').style.opacity = '0';
+        setTimeout(() => {
+            document.getElementById('product-image3').src = 'Honeywell-Barcode.jpg';
+            document.getElementById('product-image3').style.opacity = '1';
+        }, 250);
+    }, 250);
+}
+
+function resetImage3() {
+    setTimeout(() => {
+        document.getElementById('product-image3').style.opacity = '0';
+        setTimeout(() => {
+            document.getElementById('product-image3').src = 'Honeywell.png';
+            document.getElementById('product-image3').style.opacity = '1';
+        }, 250);
+    }, 250);
+}
